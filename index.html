@@ -1,155 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- TikTok Pixel Code Start -->
-<script>
-!function (w, d, t) {
-  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
-var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
-;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
-
-
-  ttq.load('D3TI823C77U93U3T8VUG');
-  ttq.page();
-}(window, document, 'ttq');
-</script>
-<!-- TikTok Pixel Code End -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "tv4ks57zn1");
-</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Select Gender | Global Sharing</title>
+<meta name="description" content="Select your gender to continue. Safe, fast, and secure experience on Global Sharing.">
+<meta http-equiv="Cache-Control" content="max-age=31536000, must-revalidate">
+
 <style>
-  body {
-    margin: 0;
-    font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #00e0ff, #ff007a);
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  *{margin:0;padding:0;box-sizing:border-box;}
+  body{
+    font-family:'Poppins',sans-serif;
+    background:linear-gradient(135deg,#00e0ff,#ff007a);
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#111;
   }
-
-  .card {
-    background: #fff;
-    width: 90%;
-    max-width: 350px;
-    border-radius: 25px;
-    text-align: center;
-    padding: 35px 25px;
-    box-shadow: 0 6px 30px rgba(0,0,0,0.15);
-    animation: fadeIn 0.7s ease forwards;
+  .card{
+    background:#fff;
+    width:90%;
+    max-width:360px;
+    border-radius:25px;
+    text-align:center;
+    padding:35px 25px;
+    box-shadow:0 6px 25px rgba(0,0,0,0.1);
+    animation:fadeIn 0.5s ease-in forwards;
   }
-
-  @keyframes fadeIn {
-    from {opacity:0; transform:translateY(25px);}
-    to {opacity:1; transform:translateY(0);}
+  @keyframes fadeIn{
+    from{opacity:0;transform:translateY(20px);}
+    to{opacity:1;transform:translateY(0);}
   }
-
-  h2 {
-    color: #111;
-    font-size: 20px;
-    margin-bottom: 25px;
+  h2{
+    font-size:20px;
+    margin-bottom:25px;
   }
-
-  /* Gender Button Style */
-  .gender {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
+  .gender{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-bottom:25px;
   }
-
-  .gender button {
-    width: 85%;
-    background: #f2f2f2;
-    border: none;
-    border-radius: 25px;
-    padding: 14px 0;
-    font-weight: 600;
-    font-size: 15px;
-    cursor: pointer;
-    transition: 0.3s;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  .gender button{
+    width:85%;
+    margin:auto;
+    background:#f2f2f2;
+    border:none;
+    border-radius:25px;
+    padding:14px 0;
+    font-weight:600;
+    font-size:15px;
+    cursor:pointer;
+    transition:all .3s;
+    box-shadow:0 2px 6px rgba(0,0,0,0.05);
   }
-
-  .gender button:hover {
-    background: linear-gradient(90deg, #00e0ff, #ff007a);
-    color: #fff;
-    transform: scale(1.03);
+  .gender button:hover,
+  .gender button.active{
+    background:linear-gradient(90deg,#00e0ff,#ff007a);
+    color:#fff;
+    transform:scale(1.03);
   }
-
-  .gender button.active {
-    background: linear-gradient(90deg, #00e0ff, #ff007a);
-    color: #fff;
+  .continue{
+    width:85%;
+    background:linear-gradient(90deg,#00e0ff,#ff007a);
+    color:#fff;
+    border:none;
+    padding:14px 24px;
+    border-radius:25px;
+    font-size:15px;
+    font-weight:600;
+    cursor:pointer;
+    transition:0.3s;
   }
-
-  .continue {
-    display: inline-block;
-    background: linear-gradient(90deg, #00e0ff, #ff007a);
-    color: #fff;
-    border: none;
-    padding: 14px 24px;
-    border-radius: 25px;
-    font-size: 15px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: 0.3s;
-    width: 85%;
+  .continue:hover{opacity:.9;transform:scale(1.02);}
+  footer{
+    font-size:12px;
+    color:#555;
+    margin-top:18px;
   }
-
-  .continue:hover {
-    opacity: 0.9;
-    transform: scale(1.02);
+  footer a{
+    color:#111;
+    text-decoration:underline;
+    cursor:pointer;
   }
-
-  footer {
-    font-size: 12px;
-    color: #555;
-    margin-top: 20px;
+  #privacy{
+    max-height:0;
+    overflow:hidden;
+    background:#f9f9f9;
+    color:#333;
+    font-size:12px;
+    text-align:left;
+    border-radius:20px;
+    padding:0 14px;
+    transition:max-height .4s ease,padding .3s ease;
+    margin-top:12px;
   }
-
-  footer a {
-    color: #111;
-    text-decoration: underline;
-    cursor: pointer;
-  }
-
-  /* Privacy slide box */
-  #privacy {
-    max-height: 0;
-    overflow: hidden;
-    background: #f9f9f9;
-    color: #333;
-    font-size: 12px;
-    text-align: left;
-    border-radius: 20px;
-    padding: 0 14px;
-    transition: max-height 0.5s ease, padding 0.3s ease;
-    margin-top: 12px;
-  }
-
-  #privacy.active {
-    max-height: 220px;
-    padding: 14px 16px;
+  #privacy.active{
+    max-height:200px;
+    padding:14px 16px;
   }
 </style>
 </head>
 <body>
   <div class="card">
-    <h2>Select Your Gender and click Continue</h2>
-
+    <h2>Select Your Gender</h2>
     <div class="gender">
       <button id="maleBtn">Male</button>
       <button id="femaleBtn">Female</button>
     </div>
-
     <button class="continue" id="continueBtn">Continue</button>
 
     <footer>
@@ -158,43 +117,38 @@ var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n
 
     <div id="privacy">
       <strong>Privacy Policy</strong><br><br>
-      Your privacy matters to us. We do not share personal details or gender information with anyone.
-      Data is used only to improve your experience on the Global Sharing platform.
-      By continuing, you agree to our secure data handling practices.
+      We value your privacy. Your gender and data are never shared or sold.
+      All information is used only to enhance your Global Sharing experience.
+      By continuing, you agree to our secure data handling policy.
     </div>
   </div>
 
 <script>
-  const maleBtn = document.getElementById('maleBtn');
-  const femaleBtn = document.getElementById('femaleBtn');
-  const continueBtn = document.getElementById('continueBtn');
-  const privacyToggle = document.getElementById('privacyToggle');
-  const privacyBox = document.getElementById('privacy');
-  let selectedGender = null;
+  const maleBtn=document.getElementById('maleBtn');
+  const femaleBtn=document.getElementById('femaleBtn');
+  const continueBtn=document.getElementById('continueBtn');
+  const privacyToggle=document.getElementById('privacyToggle');
+  const privacyBox=document.getElementById('privacy');
+  let selectedGender=null;
 
-  maleBtn.onclick = () => {
-    selectedGender = 'male';
+  maleBtn.onclick=()=>{
+    selectedGender='male';
     maleBtn.classList.add('active');
     femaleBtn.classList.remove('active');
   };
-  femaleBtn.onclick = () => {
-    selectedGender = 'female';
+  femaleBtn.onclick=()=>{
+    selectedGender='female';
     femaleBtn.classList.add('active');
     maleBtn.classList.remove('active');
   };
-
-  continueBtn.onclick = () => {
-    if (!selectedGender) {
+  continueBtn.onclick=()=>{
+    if(!selectedGender){
       alert('Please select your gender before continuing.');
       return;
     }
-    // Replace this with your actual next page link
-    window.location.href = "https://scholarship.cookrool.com/opportunity-to-get-paid-42000-to-relocate-to-the-usa-via-the-construction-visa-program-step-by-step-guide-opportunities-abroad";
+    window.location.href="https://scholarship.cookrool.com/opportunity-to-get-paid-42000-to-relocate-to-the-usa-via-the-construction-visa-program-step-by-step-guide-opportunities-abroad";
   };
-
-  privacyToggle.onclick = () => {
-    privacyBox.classList.toggle('active');
-  };
+  privacyToggle.onclick=()=>privacyBox.classList.toggle('active');
 </script>
 </body>
 </html>
